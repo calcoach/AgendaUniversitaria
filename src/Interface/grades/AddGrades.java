@@ -79,8 +79,7 @@ public class AddGrades {
                 public void focusLost(FocusEvent e) {
 
                    grades[Integer.valueOf(e.getComponent().getName())].transferFocusDownCycle();
-                      
-                    
+                                     
                             
                 }
             });

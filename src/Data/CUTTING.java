@@ -79,14 +79,14 @@ public class CUTTING {
         this.name = name;
     }
 
-    public  void setGrade(int section, double grade) {
+    public  void setGrade(int numGrade, double grade) {
         
-        grades.get(section).setCalification(calification);
+        grades.get(numGrade).setCalification(calification);
     }
 
-    public void setNameGrade(int positionSection, String name) {
+    public void setNameGrade(int numGrade, String name) {
 
-        grades.get(positionSection).setName(name);
+        grades.get(numGrade).setName(name);
     }
     
     public void setPercentageGrade(int positionSection, double name){
@@ -94,9 +94,9 @@ public class CUTTING {
         grades.get(positionSection).setPercentage(percentage);
     }
 
-    public void setDescription(int positionSection, String description) {
+    public void setDescriptionGrade(int numGrade, String description) {
         
-        grades.get(positionSection).setDescripton(description);
+        grades.get(numGrade).setDescripton(description);
      }
 
     public void addGrade(GRADE grade) {

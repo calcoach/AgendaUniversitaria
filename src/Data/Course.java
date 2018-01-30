@@ -92,9 +92,9 @@ public class Course {
         cuttings.get(section).setNameGrade(positionSection,name);
     }
     
-    public void setNameDescription(int section, int positionSection,String description){
+    public void setNameDescriptionGrade(int cutting, int numGrade,String description){
         
-       cuttings.get(section).setDescription(positionSection,description);
+       cuttings.get(cutting).setDescriptionGrade(numGrade,description);
 
     }
     

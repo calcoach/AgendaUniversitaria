@@ -85,7 +85,7 @@ public class Calendar extends javax.swing.JPanel {
        //</editor-fold>
     }
     
-    private int [] getDays(LocalDate date){
+    private int [] getInfoOfMonth(LocalDate date){
         
         //<editor-fold defaultstate="collapsed" desc="Show more" >
         int [] info=new int[2];
@@ -122,16 +122,16 @@ public class Calendar extends javax.swing.JPanel {
          //<editor-fold defaultstate="collapsed" desc="Show more" >
         
         local=date;
-        int [] info=getDays(date);
+        int [] info=getInfoOfMonth(date);
         int [] lastMounth;
         
          if(date.getMonthValue()==1){
                    
-             lastMounth=this.getDays(date.withMonth(12).withYear(date.getYear()-1));
+             lastMounth=this.getInfoOfMonth(date.withMonth(12).withYear(date.getYear()-1));
           }
                
           else{
-             lastMounth=this.getDays(date.withMonth(date.getMonthValue()-1));
+             lastMounth=this.getInfoOfMonth(date.withMonth(date.getMonthValue()-1));
           }
                
         for(int i=1;i<43;i++){
