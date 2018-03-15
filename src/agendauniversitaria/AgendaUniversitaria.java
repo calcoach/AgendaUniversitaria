@@ -5,7 +5,9 @@
  */
 package agendauniversitaria;
 
+import Data.Course;
 import Interface.WindowStartSesion;
+import Interface.grades.AddGrades;
 
 /**
  *
@@ -18,9 +20,10 @@ public class AgendaUniversitaria {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        WindowStartSesion newpage = new WindowStartSesion();
-        newpage.setVisible(true);
-        newpage.setLocationRelativeTo(null);
+         WindowStartSesion newpage = new WindowStartSesion();
+         newpage.setVisible(true);
+         newpage.setLocationRelativeTo(null);
+        
          
     }
     

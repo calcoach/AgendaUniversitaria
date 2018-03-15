@@ -5,6 +5,7 @@
  */
 package Interface.grades;
 
+import Data.CUTTING;
 import Data.Course;
 import Data.Files;
 import Interface.WindowMain;
@@ -47,7 +48,7 @@ public class WindowCourseNotes extends javax.swing.JFrame {
     
     private void paintGrade(String nameGrade, String grade,String num){
         
-        cutting panel=new cutting(num, course);
+        cutting panel=new cutting(num, course.getCutting(numCutting));
         //panel.setData(nameGrade,grade);
         //int h=panel.getMinimumSize().height-100;
         //int g=panel.getMinimumSize().width+100;
@@ -88,7 +89,7 @@ public class WindowCourseNotes extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         nameGrade = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        addCutting = new javax.swing.JButton();
         start = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
@@ -137,13 +138,13 @@ public class WindowCourseNotes extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 510, 260));
 
-        jButton1.setText("Añadir Corte");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        addCutting.setText("Añadir Corte");
+        addCutting.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                addCuttingActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, -1, 30));
+        getContentPane().add(addCutting, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, -1, 30));
 
         start.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         start.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/pagina-de-inicio.png"))); // NOI18N
@@ -162,10 +163,11 @@ public class WindowCourseNotes extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void addCuttingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCuttingActionPerformed
         // TODO add your handling code here:
        
-        cutting panel=new cutting(String.valueOf((numCutting+1)), course);
+        //REVISAR AQUI
+        cutting panel=new cutting(String.valueOf((numCutting+1)), new CUTTING("", 0));
         numCutting++;
         
         //Quiero agregar un objeto de escucha para poder agrandar el panel de un corte
@@ -188,7 +190,7 @@ public class WindowCourseNotes extends javax.swing.JFrame {
         
         
         //this.jButton1.setLocation(y, y);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_addCuttingActionPerformed
 
     private void startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startActionPerformed
         // TODO add your handling code here:
@@ -235,7 +237,7 @@ public class WindowCourseNotes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton addCutting;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel7;

@@ -32,10 +32,9 @@ public class Course {
         cuttings.get(section).addGrade(newGrade);
     }
     
-    public void addGrade(String name, typeGrade type, int section, double percentage){
-        
-        GRADE newGrade = new GRADE(name, type, percentage);
-        cuttings.get(section).addGrade(newGrade);
+    public void addCUTTING(CUTTING cutting){
+
+        cuttings.add(cutting);
     }
     
     public double calculateDef(){
@@ -60,6 +59,10 @@ public class Course {
          cont = cont + c.getPercentage();
        }
        return sum/cont;
+    }
+    
+    public CUTTING getCutting(int i){
+        return this.cuttings.get(i);
     }
    
     public double getGrade(int section, int positionSection){

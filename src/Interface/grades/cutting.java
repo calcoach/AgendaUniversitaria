@@ -5,6 +5,7 @@
  */
 package Interface.grades;
 
+import Data.CUTTING;
 import Data.Course;
 import javax.swing.JOptionPane;
 
@@ -18,13 +19,13 @@ public class cutting extends javax.swing.JPanel {
      * Creates new form cutting
      */
 
-    Course course;
+    CUTTING cutting;
     String num;
-    public cutting(String num, Course course) {
+    public cutting(String num, CUTTING cutting) {
         initComponents();
         this.jLabel1.setText("Corte " + num);
         this.num=num;
-        this.course=course;
+        this.cutting=cutting;
     }
     
 
@@ -170,7 +171,7 @@ public class cutting extends javax.swing.JPanel {
     private void AddGradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddGradeActionPerformed
         // TODO add your handling code here:
          
-        AddGrades d=new AddGrades(num, course);
+        AddGrades d=new AddGrades(num, cutting);
     }//GEN-LAST:event_AddGradeActionPerformed
 
 

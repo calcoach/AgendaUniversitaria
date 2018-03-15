@@ -19,8 +19,8 @@ public class CUTTING {
     private double percentage;
     private String name;
 
-    public CUTTING(String name, double promCutting, double percentage) {
-        this.promCutting = promCutting;
+    public CUTTING(String name, double percentage) {
+        this.name = name;
         this.percentage = percentage;
     }
 

@@ -4,15 +4,10 @@
  * and open the template in the editor.
  */
 package Interface.grades;
-import Interface.grades.WindowCourse;
 import Data.ChargeData;
-import Data.Files;
-import Data.Semester;
 import Data.Course;
 import Interface.WindowMain;
 import Sesion.Sesion;
-import java.awt.Color;
-import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
